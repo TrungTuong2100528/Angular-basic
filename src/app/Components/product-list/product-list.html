@@ -1,0 +1,8 @@
+<ul *ngIf="products && products.length > 0">
+  <li *ngFor="let p of products">
+    {{ p.name }} - {{ p.price }}$
+    <button (click)="remove(p.id)">X</button>
+  </li>
+</ul>
+
+<p *ngIf="products?.length === 0">No products</p>
